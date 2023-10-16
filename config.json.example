@@ -1,0 +1,7 @@
+{
+	"archive_time":90,
+	"archive_category":1234567890,
+	"logging_channel":1234567890,
+	"deletion_time":180,
+	"archive_before_deletion":true
+}

@@ -1,0 +1,9 @@
+[bot]
+token = 'bot_token_here'
+base_url = 'base url where archives are hosted'
+guild_id = 1234567890
+admins = [1234567890]
+immutable_roles = [1234567890]
+
+[mongo]
+uri = 'mongo uri'
