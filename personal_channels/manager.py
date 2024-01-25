@@ -8,22 +8,20 @@ from asyncio import sleep
 from .permissions import ManagerPermissions
 
 slowmode_map = {
-	0:'off',
-	5:'5 seconds',
-	10:'10 seconds',
-	15:'15 seconds',
-	30:'30 seconds',
-	60:'1 minute',
-	120:'2 minutes',
-	300:'5 minutes',
-	600:'10 minutes',
-	900:'15 minutes',
-	1800:'30 minutes',
-	3600:'1 hour',
-	7200:'2 hours',
-	21600:'6 hours'}
-
-
+	0    :'slowmode: off',
+	5    :'slowmode: 5 seconds',
+	10   :'slowmode: 10 seconds',
+	15   :'slowmode: 15 seconds',
+	30   :'slowmode: 30 seconds',
+	60   :'slowmode: 1 minute',
+	120  :'slowmode: 2 minutes',
+	300  :'slowmode: 5 minutes',
+	600  :'slowmode: 10 minutes',
+	900  :'slowmode: 15 minutes',
+	1800 :'slowmode: 30 minutes',
+	3600 :'slowmode: 1 hour',
+	7200 :'slowmode: 2 hours',
+	21600:'slowmode: 6 hours'}
 
 
 class ManagerHome(EmptyView):
