@@ -11,5 +11,5 @@ class Channel(Document):
 		cache_expiration_time = timedelta(seconds=5)
 	
 	id:int = Field(description='discord channel id')
-	owner:int = Field(description='discord user id')
+	owners:list[int] = Field(description='discord user ids')
 	permissions:dict[int,dict[str,bool|None]] = Field(description='discord user/role id: permission level')

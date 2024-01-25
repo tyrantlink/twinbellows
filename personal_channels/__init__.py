@@ -44,7 +44,7 @@ class PersonalChannels(Cog):
 			await ctx.response.send_message('this channel is not a personal channel!',ephemeral=True)
 			return
 
-		if ctx.author.id not in [channel_data.owner,*self.client.project.bot.admins]: # type: ignore
+		if ctx.author.id not in [*channel_data.owners,*self.client.project.bot.admins]: # type: ignore
 			await ctx.response.send_message('you do not own this channel!',ephemeral=True)
 			return
 
