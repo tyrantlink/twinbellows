@@ -15,6 +15,7 @@ class Client(Bot):
 		self.project = self.get_project()
 		guild_id = self.project.bot.guild_id
 		self.db = MongoDatabase(self.project.mongo.uri)
+		self.load_extension('personal_channels')
 	
 	def get_project(self) -> Project:
 		with open('project.toml','r') as f:
@@ -23,7 +24,6 @@ class Client(Bot):
 	async def on_connect(self) -> None:
 		await self.db.ready()
 		await self.change_presence(activity=Activity(type=ActivityType.custom,name='a',state=f'being a good puppy'))
-		self.load_extension('personal_channels')
 		await self.sync_commands()
 
 	async def start(self,reconnect:bool=True) -> None:
